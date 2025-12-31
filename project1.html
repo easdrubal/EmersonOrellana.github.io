@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>TechStore | Tecnología Inteligente</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition">
+
+<!-- NAVBAR -->
+<header class="fixed w-full bg-white dark:bg-gray-800 shadow z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-blue-600">TechStore</h1>
+
+    <div class="flex items-center gap-4">
+      <input id="search" type="text" placeholder="Buscar producto..."
+        class="hidden md:block px-3 py-1 rounded-lg bg-gray-100 dark:bg-gray-700 focus:outline-none">
+
+      <button onclick="toggleDarkMode()"
+        class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-lg text-sm">
+        🌙
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="pt-32 pb-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center">
+  <h2 class="text-4xl font-bold mb-4">Tecnología simple, poderosa y accesible</h2>
+  <p class="max-w-xl mx-auto text-lg opacity-90">
+    Explora productos diseñados para mejorar tu experiencia digital.
+  </p>
+</section>
+
+<!-- FILTROS -->
+<section class="max-w-7xl mx-auto px-6 py-6">
+  <div class="flex flex-wrap gap-4 justify-center">
+    <button onclick="filterProducts('all')" class="filter-btn">Todos</button>
+    <button onclick="filterProducts('laptop')" class="filter-btn">Laptops</button>
+    <button onclick="filterProducts('phone')" class="filter-btn">Smartphones</button>
+    <button onclick="filterProducts('audio')" class="filter-btn">Audio</button>
+  </div>
+</section>
+
+<!-- PRODUCTOS -->
+<section class="max-w-7xl mx-auto px-6 pb-16">
+  <div id="products" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+    <!-- Producto -->
+    <div class="product laptop bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:scale-105 transition">
+      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" class="rounded-lg mb-4">
+      <h3 class="text-xl font-semibold mb-2">Laptop Pro</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+        Rendimiento ideal para trabajo y desarrollo.
+      </p>
+      <button onclick="showAlert('Laptop Pro')" class="btn-primary">Ver más</button>
+    </div>
+
+    <div class="product phone bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:scale-105 transition">
+      <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" class="rounded-lg mb-4">
+      <h3 class="text-xl font-semibold mb-2">Smartphone X</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+        Velocidad y diseño premium.
+      </p>
+      <button onclick="showAlert('Smartphone X')" class="btn-primary">Ver más</button>
+    </div>
+
+    <div class="product audio bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:scale-105 transition">
+      <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3" class="rounded-lg mb-4">
+      <h3 class="text-xl font-semibold mb-2">Audífonos Wireless</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+        Sonido envolvente sin cables.
+      </p>
+      <button onclick="showAlert('Audífonos Wireless')" class="btn-primary">Ver más</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section class="bg-white dark:bg-gray-800 py-16">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
+    <div>
+      <h4 class="text-xl font-semibold mb-2">UX Intuitiva</h4>
+      <p class="text-gray-600 dark:text-gray-400">Diseño pensado para todos.</p>
+    </div>
+    <div>
+      <h4 class="text-xl font-semibold mb-2">Tecnología Actual</h4>
+      <p class="text-gray-600 dark:text-gray-400">Productos modernos y confiables.</p>
+    </div>
+    <div>
+      <h4 class="text-xl font-semibold mb-2">Soporte</h4>
+      <p class="text-gray-600 dark:text-gray-400">Acompañamiento constante.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-gray-300 py-10 text-center">
+  <p class="font-semibold">TechStore © 2026</p>
+  <p class="text-sm">Diseño UX/UI con Tailwind CSS</p>
+</footer>
+
+<!-- COMPONENTES -->
+<style>
+  .btn-primary {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+  }
+
+  .btn-primary:hover {
+    background: #1d4ed8;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    background: #e5e7eb;
+    border-radius: 9999px;
+  }
+
+  .filter-btn:hover {
+    background: #2563eb;
+    color: white;
+  }
+</style>
+
+<!-- JS -->
+<script>
+  // Modo oscuro
+  function toggleDarkMode() {
+    document.documentElement.classList.toggle('dark');
+    localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+  }
+
+  if (localStorage.theme === 'dark') {
+    document.documentElement.classList.add('dark');
+  }
+
+  // Filtro
+  function filterProducts(category) {
+    document.querySelectorAll('.product').forEach(p => {
+      p.style.display = category === 'all' || p.classList.contains(category)
+        ? 'block'
+        : 'none';
+    });
+  }
+
+  // Búsqueda
+  document.getElementById('search').addEventListener('keyup', function () {
+    let value = this.value.toLowerCase();
+    document.querySelectorAll('.product').forEach(p => {
+      p.style.display = p.innerText.toLowerCase().includes(value) ? 'block' : 'none';
+    });
+  });
+
+  // Interacción
+  function showAlert(product) {
+    alert(`Producto seleccionado: ${product}`);
+  }
+</script>
+
+</body>
+</html>

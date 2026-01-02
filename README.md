@@ -17,21 +17,21 @@ El objetivo principal del sitio es servir como herramienta de presentación prof
 📂 Estructura del proyecto:
   📁 portafolio-personal
   │
-  ├── 📄 index.html        # Página principal
-  ├── 📄 project1.html     # Página de proyectos
-  ├── 🖼️ eo.jpg / eo.jpeg  # Recursos gráficos
-  ├── 📄 README.md         # Documentación del proyecto
+  ├── 📄 index.html                      # Página principal
+  ├── 📄 project1.html                   # Página de proyectos
+  ├── 🖼️ eo.jpg / eo.jpeg                # Recursos gráficos
+  ├── 📄 README.md                       # Documentación del proyecto
 
-👨‍💻 Autor
+👨‍💻 Autor:
 
-Emerson Asdrubal Orellana.
-Ingeniero de Sistemas | Docente de Informática
-Enfoque en desarrollo web, UX/UI y tecnología educativa.
+* Emerson Asdrubal Orellana.
+* Ingeniero de Sistemas | Docente de Informática
+* Enfoque en desarrollo web, UX/UI y tecnología educativa.
 
 📧 Contacto: 
-💼 LinkedIn: www.linkedin.com/in/eorellana16
+* 💼 LinkedIn: www.linkedin.com/in/eorellana16
 
-📄 Licencia
+📄 Licencia:
 
-Este proyecto es de uso personal y profesional.
-No está permitido su uso comercial sin autorización previa.
+* Este proyecto es de uso personal y profesional.
+* No está permitido su uso comercial sin autorización previa.

@@ -5,7 +5,7 @@
   <title>TechStore | Tecnología Inteligente</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Tailwind -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Google Font -->
@@ -18,7 +18,9 @@
   </script>
 
   <style>
-    body { font-family: 'Inter', sans-serif; }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
   </style>
 </head>
 
@@ -30,10 +32,14 @@
     <h1 class="text-xl font-bold text-blue-600">TechStore</h1>
 
     <div class="flex items-center gap-4">
-      <input id="search" type="text" placeholder="Buscar producto..."
+      <input
+        id="search"
+        type="text"
+        placeholder="Buscar producto..."
         class="hidden md:block px-3 py-1 rounded-lg bg-gray-100 dark:bg-gray-700 focus:outline-none">
 
-      <button onclick="toggleDarkMode()"
+      <button
+        onclick="toggleDarkMode()"
         class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-lg text-sm">
         🌙
       </button>
@@ -63,30 +69,41 @@
 <section class="max-w-7xl mx-auto px-6 pb-16">
   <div id="products" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 
-    <!-- Producto -->
+    <!-- Laptop -->
     <div class="product laptop bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:scale-105 transition">
-      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" class="rounded-lg mb-4">
+      <img
+        src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+        class="rounded-lg mb-4"
+        alt="Laptop profesional">
       <h3 class="text-xl font-semibold mb-2">Laptop Pro</h3>
       <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-        Rendimiento ideal para trabajo y desarrollo.
+        Rendimiento ideal para trabajo, estudio y desarrollo.
       </p>
       <button onclick="showAlert('Laptop Pro')" class="btn-primary">Ver más</button>
     </div>
 
+    <!-- Smartphone -->
     <div class="product phone bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:scale-105 transition">
-      <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" class="rounded-lg mb-4">
+      <img
+        src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
+        class="rounded-lg mb-4"
+        alt="Smartphone moderno">
       <h3 class="text-xl font-semibold mb-2">Smartphone X</h3>
       <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-        Velocidad y diseño premium.
+        Velocidad, cámara avanzada y diseño premium.
       </p>
       <button onclick="showAlert('Smartphone X')" class="btn-primary">Ver más</button>
     </div>
 
+    <!-- Audífonos (IMAGEN CORREGIDA ✅) -->
     <div class="product audio bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:scale-105 transition">
-      <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3" class="rounded-lg mb-4">
+      <img
+        src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+        class="rounded-lg mb-4"
+        alt="Audífonos inalámbricos">
       <h3 class="text-xl font-semibold mb-2">Audífonos Wireless</h3>
       <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-        Sonido envolvente sin cables.
+        Sonido envolvente sin cables y cancelación de ruido.
       </p>
       <button onclick="showAlert('Audífonos Wireless')" class="btn-primary">Ver más</button>
     </div>
@@ -99,7 +116,7 @@
   <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
     <div>
       <h4 class="text-xl font-semibold mb-2">UX Intuitiva</h4>
-      <p class="text-gray-600 dark:text-gray-400">Diseño pensado para todos.</p>
+      <p class="text-gray-600 dark:text-gray-400">Diseño claro y fácil de usar.</p>
     </div>
     <div>
       <h4 class="text-xl font-semibold mb-2">Tecnología Actual</h4>
@@ -107,18 +124,18 @@
     </div>
     <div>
       <h4 class="text-xl font-semibold mb-2">Soporte</h4>
-      <p class="text-gray-600 dark:text-gray-400">Acompañamiento constante.</p>
+      <p class="text-gray-600 dark:text-gray-400">Acompañamiento continuo.</p>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="bg-gray-900 text-gray-300 py-10 text-center">
-  <p class="font-semibold">TechStore © 2024</p>
+  <p class="font-semibold">TechStore © 2024-2026</p>
   <p class="text-sm">Creado por Emerson Asdrubal Orellana.  Creado con Tailwind CSS</p>
 </footer>
 
-<!-- COMPONENTES -->
+<!-- ESTILOS EXTRA -->
 <style>
   .btn-primary {
     width: 100%;
@@ -144,7 +161,7 @@
   }
 </style>
 
-<!-- JS -->
+<!-- JAVASCRIPT -->
 <script>
   // Modo oscuro
   function toggleDarkMode() {
@@ -156,24 +173,27 @@
     document.documentElement.classList.add('dark');
   }
 
-  // Filtro
+  // Filtro por categoría
   function filterProducts(category) {
     document.querySelectorAll('.product').forEach(p => {
-      p.style.display = category === 'all' || p.classList.contains(category)
-        ? 'block'
-        : 'none';
+      p.style.display =
+        category === 'all' || p.classList.contains(category)
+          ? 'block'
+          : 'none';
     });
   }
 
-  // Búsqueda
+  // Búsqueda en tiempo real
   document.getElementById('search').addEventListener('keyup', function () {
     let value = this.value.toLowerCase();
     document.querySelectorAll('.product').forEach(p => {
-      p.style.display = p.innerText.toLowerCase().includes(value) ? 'block' : 'none';
+      p.style.display = p.innerText.toLowerCase().includes(value)
+        ? 'block'
+        : 'none';
     });
   });
 
-  // Interacción
+  // Interacción simple
   function showAlert(product) {
     alert(`Producto seleccionado: ${product}`);
   }

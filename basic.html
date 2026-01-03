@@ -1,39 +1,35 @@
 <!DOCTYPE html>
-<!-- PROJECT: EXCEL ACADEMY | BASIC LEVEL -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Excel Academy | Basic Level</title>
+  <title>Basic Excel | Excel Academy</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
-    body { scroll-behavior: smooth; }
-
-    .navbar-custom {
-      background-color: #145a32;
+    body {
+      scroll-behavior: smooth;
     }
 
-    .header-basic {
+    .header-section {
+      margin-top: 56px;
       background: linear-gradient(135deg, #1d6f42, #2ecc71);
       color: white;
-      padding: 100px 20px;
+      padding: 80px 20px;
     }
 
-    .topic-icon {
-      font-size: 36px;
-      color: #1d6f42;
-      margin-bottom: 10px;
+    .topic-card {
+      border-left: 6px solid #198754;
     }
 
     footer {
-      background:#145a32;
-      color:white;
+      background: #1d6f42;
+      color: white;
     }
   </style>
 </head>
@@ -41,12 +37,14 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
     <a class="navbar-brand fw-bold" href="index.html">Excel Academy</a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="menu">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link active" href="basic.html">Basic</a></li>
@@ -60,118 +58,118 @@
 </nav>
 
 <!-- HEADER -->
-<header class="header-basic text-center mt-5">
+<section class="header-section text-center">
   <div class="container">
-    <h1 class="display-6 fw-bold">Excel Basic Level</h1>
+    <h1 class="display-6 fw-bold">Basic Excel Skills</h1>
     <p class="lead mt-3">
-      Build a strong foundation in Microsoft Excel by learning the core concepts
-      required for productivity and MOS Excel Specialist certification.
+      Learn the fundamental Excel skills required to build a strong foundation
+      and succeed in the <strong>MOS Excel Specialist certification</strong>.
+    </p>
+    <p class="mt-2">
+      This level focuses on understanding the Excel interface, basic formatting,
+      and essential worksheet operations.
     </p>
   </div>
-</header>
+</section>
 
 <!-- CONTENT -->
 <section class="container py-5">
-
   <div class="row g-4">
 
-    <!-- Topic 1 -->
-    <div class="col-md-4">
-      <div class="card shadow h-100 text-center">
+    <div class="col-md-6">
+      <div class="card shadow h-100 topic-card">
         <div class="card-body">
-          <div class="topic-icon">
-            <i class="fas fa-table"></i>
-          </div>
-          <h5>Excel Interface</h5>
-          <p>
-            Understand workbooks, worksheets, rows, columns, cells,
-            and how Excel organizes data.
+          <h5 class="card-title">
+            <i class="fa-solid fa-desktop text-success me-2"></i>
+            Excel Interface & Navigation
+          </h5>
+          <p class="card-text">
+            Become familiar with the Excel workspace and basic navigation tools.
           </p>
-          <button class="btn btn-success" onclick="showInfo(
-            'Excel is a spreadsheet application used to store, organize, and analyze data using rows, columns, and cells.'
-          )">
-            Learn more
-          </button>
+          <ul>
+            <li>Ribbon and tabs</li>
+            <li>Worksheets and workbooks</li>
+            <li>Keyboard and mouse navigation</li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <!-- Topic 2 -->
-    <div class="col-md-4">
-      <div class="card shadow h-100 text-center">
+    <div class="col-md-6">
+      <div class="card shadow h-100 topic-card">
         <div class="card-body">
-          <div class="topic-icon">
-            <i class="fas fa-calculator"></i>
-          </div>
-          <h5>Basic Formulas</h5>
-          <p>
-            Learn essential formulas such as SUM, AVERAGE, MIN, and MAX,
-            commonly tested in MOS exams.
+          <h5 class="card-title">
+            <i class="fa-solid fa-font text-success me-2"></i>
+            Cell Formatting
+          </h5>
+          <p class="card-text">
+            Format data clearly to improve readability and organization.
           </p>
-          <button class="btn btn-success" onclick="showInfo(
-            'Example: =SUM(A1:A10) adds all values from cell A1 to A10.'
-          )">
-            View example
-          </button>
+          <ul>
+            <li>Number and date formats</li>
+            <li>Alignment and borders</li>
+            <li>Cell styles</li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <!-- Topic 3 -->
-    <div class="col-md-4">
-      <div class="card shadow h-100 text-center">
+    <div class="col-md-6">
+      <div class="card shadow h-100 topic-card">
         <div class="card-body">
-          <div class="topic-icon">
-            <i class="fas fa-paint-brush"></i>
-          </div>
-          <h5>Cell Formatting</h5>
-          <p>
-            Apply number, currency, percentage, and text formats
-            to improve data readability.
+          <h5 class="card-title">
+            <i class="fa-solid fa-calculator text-success me-2"></i>
+            Basic Formulas
+          </h5>
+          <p class="card-text">
+            Use simple formulas to perform calculations in Excel.
           </p>
-          <button class="btn btn-success" onclick="showInfo(
-            'Formatting cells helps present data clearly and is an important skill for MOS certification.'
-          )">
-            Learn more
-          </button>
+          <ul>
+            <li>SUM, AVERAGE</li>
+            <li>MIN and MAX</li>
+            <li>Relative cell references</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card shadow h-100 topic-card">
+        <div class="card-body">
+          <h5 class="card-title">
+            <i class="fa-solid fa-table-cells text-success me-2"></i>
+            Worksheet Management
+          </h5>
+          <p class="card-text">
+            Manage worksheets efficiently within a workbook.
+          </p>
+          <ul>
+            <li>Insert and delete sheets</li>
+            <li>Rename and move sheets</li>
+            <li>Page layout basics</li>
+          </ul>
         </div>
       </div>
     </div>
 
   </div>
-
 </section>
 
-<!-- MODAL -->
-<div class="modal fade" id="infoModal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Explanation</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body" id="modalContent"></div>
-    </div>
-  </div>
-</div>
+<!-- CTA -->
+<section class="text-center py-4 bg-light">
+  <a href="intermediate.html" class="btn btn-success btn-lg">
+    Continue to Intermediate Level
+  </a>
+</section>
 
 <!-- FOOTER -->
 <footer class="text-center py-3">
-  <p class="mb-0">
-    © 2026 Excel Academy — All rights reserved. <br>
-    Developed by <strong>Emerson Orellana</strong>
-  </p>
+  <p class="mb-0">© 2026 All rights reserved | Emerson Orellana</p>
 </footer>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
-  function showInfo(text) {
-    document.getElementById("modalContent").innerText = text;
-    new bootstrap.Modal(document.getElementById("infoModal")).show();
-  }
-</script>
-
 </body>
 </html>
+

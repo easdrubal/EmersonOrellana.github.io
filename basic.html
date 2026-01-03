@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- PROJECT: EXCEL ACADEMY | BASIC LEVEL -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Excel Academy | Basic Level</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body { scroll-behavior: smooth; }
+
+    .navbar-custom {
+      background-color: #145a32;
+    }
+
+    .header-basic {
+      background: linear-gradient(135deg, #1d6f42, #2ecc71);
+      color: white;
+      padding: 100px 20px;
+    }
+
+    .topic-icon {
+      font-size: 36px;
+      color: #1d6f42;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background:#145a32;
+      color:white;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Excel Academy</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="basic.html">Basic</a></li>
+        <li class="nav-item"><a class="nav-link" href="intermediate.html">Intermediate</a></li>
+        <li class="nav-item"><a class="nav-link" href="advanced.html">Advanced</a></li>
+        <li class="nav-item"><a class="nav-link" href="practice.html">Practice</a></li>
+        <li class="nav-item"><a class="nav-link" href="tips.html">MOS Tips</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="header-basic text-center mt-5">
+  <div class="container">
+    <h1 class="display-6 fw-bold">Excel Basic Level</h1>
+    <p class="lead mt-3">
+      Build a strong foundation in Microsoft Excel by learning the core concepts
+      required for productivity and MOS Excel Specialist certification.
+    </p>
+  </div>
+</header>
+
+<!-- CONTENT -->
+<section class="container py-5">
+
+  <div class="row g-4">
+
+    <!-- Topic 1 -->
+    <div class="col-md-4">
+      <div class="card shadow h-100 text-center">
+        <div class="card-body">
+          <div class="topic-icon">
+            <i class="fas fa-table"></i>
+          </div>
+          <h5>Excel Interface</h5>
+          <p>
+            Understand workbooks, worksheets, rows, columns, cells,
+            and how Excel organizes data.
+          </p>
+          <button class="btn btn-success" onclick="showInfo(
+            'Excel is a spreadsheet application used to store, organize, and analyze data using rows, columns, and cells.'
+          )">
+            Learn more
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Topic 2 -->
+    <div class="col-md-4">
+      <div class="card shadow h-100 text-center">
+        <div class="card-body">
+          <div class="topic-icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <h5>Basic Formulas</h5>
+          <p>
+            Learn essential formulas such as SUM, AVERAGE, MIN, and MAX,
+            commonly tested in MOS exams.
+          </p>
+          <button class="btn btn-success" onclick="showInfo(
+            'Example: =SUM(A1:A10) adds all values from cell A1 to A10.'
+          )">
+            View example
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Topic 3 -->
+    <div class="col-md-4">
+      <div class="card shadow h-100 text-center">
+        <div class="card-body">
+          <div class="topic-icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h5>Cell Formatting</h5>
+          <p>
+            Apply number, currency, percentage, and text formats
+            to improve data readability.
+          </p>
+          <button class="btn btn-success" onclick="showInfo(
+            'Formatting cells helps present data clearly and is an important skill for MOS certification.'
+          )">
+            Learn more
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MODAL -->
+<div class="modal fade" id="infoModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Explanation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="modalContent"></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center py-3">
+  <p class="mb-0">
+    © 2026 Excel Academy — All rights reserved. <br>
+    Developed by <strong>Emerson Orellana</strong>
+  </p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  function showInfo(text) {
+    document.getElementById("modalContent").innerText = text;
+    new bootstrap.Modal(document.getElementById("infoModal")).show();
+  }
+</script>
+
+</body>
+</html>
